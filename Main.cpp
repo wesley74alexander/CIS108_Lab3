@@ -18,7 +18,7 @@ int main()
 {
   cout << "\nThis is a calculator!\n" << "========================\n" << "> "; //Prompts user for input
 	do {
-		key = getchar(); // Gets user input one character at a time
+		key = getchar(); // Gets user input one character at a time. I used this instead of _getch() because conio.h library is only accessable from Windows devices.
 		switch (key) {
 			case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9': case '0': case '.':
 				if (first_entry == true){
