@@ -3,37 +3,51 @@
 #include <math.h> //contains pow() function
 #include <string>
 
-double current_value;
-double memory_value;
-double add(double a, double b){
-  return a + b;
+namespace cal{
+
+double num1;
+double num2;
+double stored;
+std::string build_num1;
+std::string build_num2;
+bool first_entry;
+
+double add(double num1, double num2){
+  return num1 + num2;
 };
-double subtract(double a, double b){
-  return a - b;
+double subtract(double num1, double num2){
+  return num1 - num2;
 };
-double multiply(double a, double b){
-  return a * b;
+double multiply(double num1, double num2){
+  return num1 * num2;
 };
-double divide(double a, double b){
-  return a / b;
+double divide(double num1, double num2){
+  return num1 / num2;
 };
-double power(double a, double b){
-  return pow(a, b); //from math.h since std library does not include exponentiation function
+double power(double num1, double num2){
+  return pow(num1, num2); //from math.h since std library does not include exponentiation function
 };
-void store(double current_value){
-  memory_value = current_value;
+double store(double num1){
+  stored = num1;
+  return stored;
 };
-double recallmem(){
-  return memory_value;
+double recallmem(double stored){
+  return stored;
 };
-void clearmem(){
-  memory_value = 0.0;
+double clearmem(double stored){
+  stored = 0.0;
+  return stored;
 };
-double invert(double current_value){
-  current_value *= -1;
-  return current_value;
+double invert(double num1){
+  num1 *= -1;
+  return num1;
 };
-double clearval(){
-  current_value = 0.0;
-  return current_value;
+double clearval(double num1, double num2, std::string build_num1, std::string build_num2, bool first_entry){
+  num1 = 0.0;
+  num2 = 0.0;
+  build_num1 = "";
+  build_num2 = "";
+  first_entry = true;
+  return num1;
 };
+}
